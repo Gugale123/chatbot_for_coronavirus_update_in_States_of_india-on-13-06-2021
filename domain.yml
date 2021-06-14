@@ -1,0 +1,40 @@
+version: "2.0"
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - bot_challenge
+  - corona_state
+
+actions:
+  - action_hello_world
+  - action_update
+
+entities:
+  - state
+  
+slots:
+  state:
+    type: text
+  
+  
+responses:
+  utter_greet:
+  - text: "Hello sir welcome to RASA. We are providing coronivirus updates from the states of India. Please tell me the state for which you wont updates."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_sorry:
+  - text: "sorry sir we only have this much information regarding the {state}"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
