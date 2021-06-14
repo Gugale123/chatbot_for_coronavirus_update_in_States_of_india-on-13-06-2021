@@ -1,0 +1,92 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+   
+- intent: corona_state
+  examples: |
+    - [Andhra Pradesh](state)
+    - [Arunachal Pradesh](state)
+    - [Assam](state)
+    - [Bihar](state)
+    - [Chhattisgarh](state)
+    - [Goa](state)
+    - [Gujarat](state)
+    - [Haryana](state)
+    - [Himachal Pradesh](state)
+    - [Jammu & Kashmir](state)
+    - [Jharkhand](state)
+    - [Karnataka](state)
+    - [Kerala](state)
+    - [Madhya Pradesh](state)
+    - [Maharashtra](state)
+    - [Manipur](state)
+    - [Meghalaya](state)
+    - [Mizoram](state)
+    - [Nagaland](state)
+    - [Orissa](state)
+    - [Punjab](state)
+    - [Rajasthan](state)
+    - [Sikkim](state)
+    - [Tamil Nadu](state)
+    - [Telangana](state)
+    - [Tripura](state)
+    - [Uttar Pradesh](state)
+    - [Uttarakhand](state)
+    - [West Bengal](state)
+    
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
