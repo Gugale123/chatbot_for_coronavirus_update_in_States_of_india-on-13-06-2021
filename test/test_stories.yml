@@ -1,0 +1,106 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Maharashtra     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: action_hello_world
+  
+- story: happy path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bihar     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: action_hello_world
+    
+  - story: happy path 3
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Haryana     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      y
+    intent: affirm
+  - action: action_hello_world
+  
+   - story: sad path 1
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Haryana     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      n
+    intent: deny
+  - action: utter_sorry
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bihar     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_sorry
+  
+  - story: sad path 1
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Maharashtra     
+    intent: corona_state
+  - action: action_update
+  - action: utter_did_that_help
+  - user: |
+      n
+    intent: deny
+  - action: utter_sorry
+  
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
